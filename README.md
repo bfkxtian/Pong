@@ -7,7 +7,7 @@ Controls:
   SINGLEPLAYER:
     'w' and 's': move up and down (left)
   MULTIPLAYER:
-    'w' and 's': move up and down (player 1, server - left )
+    'w' and 's': move up and down (player 1, server - left )\n
     'o' and 'l': move up and down (player2, client - right )
   
   Issues:
