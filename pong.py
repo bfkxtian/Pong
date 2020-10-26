@@ -39,11 +39,11 @@ class Ball:
     def collisions(self): #determine and compute collisions
         if self.rect.colliderect(p1.rect): #check collision with p1
             self.velocity[1]+=(self.rect.centery-p1.rect.centery)/halfPaddle*displacement
-            self.velocity[0]=math.sqrt((displacement*displacement)-(self.velocity[1]*self.velocity[1]))
+            self.velocity[0]=math.sqrt(abs((displacement*displacement)-(self.velocity[1]*self.velocity[1])))
             blip.play()
         if self.rect.colliderect(p2.rect): #check collision with p2
             self.velocity[1]+=(self.rect.centery-p2.rect.centery)/halfPaddle*displacement
-            self.velocity[0]=-math.sqrt((displacement*displacement)-(self.velocity[1]*self.velocity[1]))
+            self.velocity[0]=-math.sqrt(abs((displacement*displacement)-(self.velocity[1]*self.velocity[1])))
             blip.play()
         if self.rect.top<0 or self.rect.bottom>height: #check collision with boundary
             self.velocity[1]*=-1 #reflect ball vertically
